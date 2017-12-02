@@ -5,22 +5,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import mapboxgl from 'mapbox-gl';
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JpZGFyaW8iLCJhIjoiY2phcGQ1amNpNHR3aTMycDdtbGU1eDJodCJ9.wOWx4S_gzEZc-rMq-jA9gA';
+  const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10'
+  });
 })

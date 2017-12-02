@@ -5,12 +5,14 @@
     "@rails/webpacker": "^3.0.2",
     "babel-preset-react": "^6.24.1",
     "coffeescript": "1.12.7",
+    "mapbox-gl": "^0.42.2",
     "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-mapbox-gl": "^3.2.1",
     "react-on-rails": "^10.0.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.5"
   }
 }
