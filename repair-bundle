@@ -1,0 +1,1 @@
+gem uninstall bundler && gem install bundler --version '1.15.4' && rm ./bin/webpack ./bin/webpack-dev-server && rails webpacker:install && rails webpacker:install:react && gem update bundler && foreman start -f Procfile.dev
