@@ -7,14 +7,29 @@ export default class Map extends React.Component {
   constructor(props) {
 
     super(props);
-    this.state = { data: this.props.data };
+
+    var width = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+    var height = window.innerHeight
+      || document.documentElement.clientHeight
+      || document.body.clientHeight;
+
+    this.state = { data: this.props.data,
+                    windowSize: {
+                      width: width,
+                      height: height
+                    } };
+
   }
 
 
 
   render() {
+
     return (
-      <div id='map' style={{width: '400px', height: '300px'}} data={this.state.data}></div>
+      <div id='map' style={{width: this.state.windowSize.width, height: this.state.windowSize.height}} data={this.state.data}></div>
     );
   }
 
